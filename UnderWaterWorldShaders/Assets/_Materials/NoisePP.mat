@@ -24,8 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _DepthDistance: 5.17
+    - _DepthStart: 0
     - _NoiseFrequency: 3.58
     - _NoiseScale: 2.01
-    - _NoiseSpeed: 10.3
-    - _PixelOffset: 0.0039
+    - _NoiseSpeed: 8.1
+    - _PixelOffset: 0.0044
     m_Colors: []
