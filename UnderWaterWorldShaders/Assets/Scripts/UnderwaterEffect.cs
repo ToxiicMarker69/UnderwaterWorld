@@ -15,6 +15,9 @@ public class UnderwaterEffect : MonoBehaviour
     public float _noiseFrequency;
     [Range(0.1f, 30f)]
     public float _noiseSpeed;
+
+    public float _depthStart;
+    public float _depthDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,8 @@ public class UnderwaterEffect : MonoBehaviour
         _mat.SetFloat("_NoiseSpeed", _noiseSpeed);
         _mat.SetFloat("_NoiseScale", _noiseScale);
         _mat.SetFloat("_PixelOffset", _pixelOffset);
+        _mat.SetFloat("_DepthStart", _depthStart);
+        _mat.SetFloat("_DepthDistance", _depthDistance);
 
     }
 

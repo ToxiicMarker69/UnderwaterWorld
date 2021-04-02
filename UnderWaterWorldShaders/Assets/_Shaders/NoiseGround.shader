@@ -2,7 +2,7 @@
 {
     Properties
     {
-            _Tess ("Tessellation", Range(1,8)) = 4
+        _Tess ("Tessellation", Range(1,8)) = 4
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _NormalMap("Normal Map", 2D) = "bump" {}
