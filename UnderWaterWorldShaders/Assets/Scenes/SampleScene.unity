@@ -243,7 +243,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &874785109
@@ -407,41 +407,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: sensitivity.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: sensitivity.y
-      value: -1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: acceleration.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: acceleration.y
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: inputLagPeriod
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
-        type: 3}
-      propertyPath: maxVerticalAngleFromHorizon
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 4172284252063002873, guid: 21752288ac9079346a62e5a05b6bd4a1,
         type: 3}
       propertyPath: m_Name
@@ -460,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 4172284252063002878, guid: 21752288ac9079346a62e5a05b6bd4a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.42
+      value: 27.52
       objectReference: {fileID: 0}
     - target: {fileID: 4172284252063002878, guid: 21752288ac9079346a62e5a05b6bd4a1,
         type: 3}

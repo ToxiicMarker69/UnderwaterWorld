@@ -100,7 +100,7 @@ MonoBehaviour:
   _mat: {fileID: 2100000, guid: 2191cafad8a9fee4e9368c13abfa46c0, type: 2}
   _fogColor: {r: 0.28439835, g: 0.7264151, b: 0.49954215, a: 0}
   _depthStart: 0
-  _depthDistance: 9.1
+  _depthDistance: 18.76
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,11 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d793d97f54cfd8489655dbf199554af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: {x: 0, y: 0}
-  acceleration: {x: 0, y: 0}
-  inputLagPeriod: 0
-  maxVerticalAngleFromHorizon: 0
-  speed: 10
+  sensitivity: {x: 1000, y: -1000}
+  acceleration: {x: 1000, y: 1000}
+  inputLagPeriod: 0.001
+  maxVerticalAngleFromHorizon: 90
+  speed: 5
 --- !u!1001 &4172284251791124003
 PrefabInstance:
   m_ObjectHideFlags: 0
