@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mat: {fileID: 2100000, guid: 2191cafad8a9fee4e9368c13abfa46c0, type: 2}
-  _fogColor: {r: 0.28439835, g: 0.7264151, b: 0.49954215, a: 0}
-  _depthStart: 0
-  _depthDistance: 18.76
+  _fogColor: {r: 0.09215914, g: 0.1792453, b: 0.12637155, a: 0.48235294}
+  _depthStart: 5
+  _depthDistance: 30
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,10 +195,10 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 0.50271446, g: 0.745283, b: 0.5567402, a: 1}
+  m_Intensity: 2
   m_Range: 30
-  m_SpotAngle: 50
+  m_SpotAngle: 80
   m_InnerSpotAngle: 5
   m_CookieSize: 10
   m_Shadows:
@@ -300,10 +300,10 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 0.50271446, g: 0.745283, b: 0.5567402, a: 1}
+  m_Intensity: 2
   m_Range: 30
-  m_SpotAngle: 50
+  m_SpotAngle: 80
   m_InnerSpotAngle: 5
   m_CookieSize: 10
   m_Shadows:
