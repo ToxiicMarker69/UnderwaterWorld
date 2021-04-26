@@ -65,7 +65,7 @@ public class PMScript_2 : MonoBehaviour
         Cursor.visible = false; //Makes Cursor invisible
     }
     void FixedUpdate()
-    {   bob = new Vector3(0,0, 1/period * Mathf.Sin(Time.deltaTime));
+    {   bob = new Vector3(0, period * Mathf.Sin(Time.time), 0);
     
         activeForwardSpeed = Input.GetAxisRaw("Vertical") * speed;
         activeStrafeSpeed = Input.GetAxisRaw("Horizontal") * speed;
