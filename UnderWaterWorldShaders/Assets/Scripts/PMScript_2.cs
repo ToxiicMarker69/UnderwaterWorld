@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,15 +8,15 @@ public class PMScript_2 : MonoBehaviour
     [SerializeField] private Vector2 acceleration;
     [SerializeField] private float inputLagPeriod;
     [SerializeField] private float maxVerticalAngleFromHorizon;
-    [SerializeField] private float speed = 10.0f;
-    [SerializeField] private float period = 10.0f;
-    //[SerializeField] private float surfaceLevel = 3.5f;
+    [SerializeField] private float speed = 0.1f;
+    [SerializeField] private float period = 0.001f;
     private Vector2 velocity;
     private Vector2 rotation; //the current rotation in degrees
     private Vector2 lastInputEvent;//The last recieved non-zerro input value
     private float inputLagTimer;//The time since the last recieved non-zero input value
     private float activeForwardSpeed, activeStrafeSpeed; //Horizontal/Vertical movement
-    private Vector3 bob;
+    private float bob;
+    Rigidbody rb;
     
     private void OnEnable() {
         //Reset the slate
@@ -59,18 +59,28 @@ public class PMScript_2 : MonoBehaviour
         } 
         return lastInputEvent;
     }
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
         void Start()
     {
         Cursor.lockState = CursorLockMode.Confined; //Locks Cursor in window until ESC is pressed to leave game view
         Cursor.visible = false; //Makes Cursor invisible
     }
     void FixedUpdate()
-    {   bob = new Vector3(0, period * Mathf.Sin(Time.time), 0);
+    {   bob = period * Mathf.Sin(Time.time);
     
-        activeForwardSpeed = Input.GetAxisRaw("Vertical") * speed;
-        activeStrafeSpeed = Input.GetAxisRaw("Horizontal") * speed;
+        activeForwardSpeed = Input.GetAxis("Vertical") * speed;
+        activeStrafeSpeed = Input.GetAxis("Horizontal") * speed;
+        //Vector3 m_Input = new Vector3(activeStrafeSpeed, bob, activeForwardSpeed);
 
-        transform.position += (transform.forward * activeForwardSpeed * Time.deltaTime) + (transform.right * activeStrafeSpeed * Time.deltaTime) + (bob);
+        //rb.velocity = new Vector3(activeStrafeSpeed, bob , activeForwardSpeed);
+        //rb.velocity = transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + bob;
+        rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob);
+
+        //transform.position += (transform.forward * activeForwardSpeed * Time.deltaTime) + (transform.right * activeStrafeSpeed * Time.deltaTime) + (bob);
         //transform.position = Vector3.ClampMagnitude(transform.position, speed * speed);
             //Debug.Log("Y Position: " + transform.position.y);
     }
