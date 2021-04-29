@@ -279,6 +279,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5877007961960430595, guid: 940aafbe51e6efd4fb8971baf61f5016,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877007961960430595, guid: 940aafbe51e6efd4fb8971baf61f5016,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 157.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915272751998928001, guid: 940aafbe51e6efd4fb8971baf61f5016,
+        type: 3}
+      propertyPath: m_text
+      value: "Controls \n(Press X to Close)\n\nF to Toggle Flashlight\nForward/Backward:
+        W/S\nLeft/Right: A/S\nAim with Mouse\nPress ESC to Unlock Mouse"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 940aafbe51e6efd4fb8971baf61f5016, type: 3}
 --- !u!1 &164552790 stripped
@@ -892,7 +908,7 @@ GameObject:
   - component: {fileID: 519070140}
   m_Layer: 0
   m_Name: Collectable1 (7)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1022,7 +1038,7 @@ GameObject:
   - component: {fileID: 583256384}
   m_Layer: 0
   m_Name: Collectable1 (5)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,7 +1168,7 @@ GameObject:
   - component: {fileID: 650923193}
   m_Layer: 0
   m_Name: Collectable1 (2)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,7 +1496,7 @@ GameObject:
   - component: {fileID: 795373367}
   m_Layer: 0
   m_Name: Collectable1 (1)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2035,6 +2051,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2897597872773710271, guid: 21752288ac9079346a62e5a05b6bd4a1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3578517676772242364, guid: 21752288ac9079346a62e5a05b6bd4a1,
         type: 3}
       propertyPath: countText
@@ -2213,7 +2234,7 @@ GameObject:
   - component: {fileID: 1372283994}
   m_Layer: 0
   m_Name: Collectable1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2709,7 +2730,7 @@ GameObject:
   - component: {fileID: 1612428690}
   m_Layer: 0
   m_Name: Collectable1 (4)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2908,7 +2929,7 @@ GameObject:
   - component: {fileID: 1634179415}
   m_Layer: 0
   m_Name: Collectable1 (6)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3537,7 +3558,7 @@ GameObject:
   - component: {fileID: 2138815871}
   m_Layer: 0
   m_Name: Collectable1 (3)
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
