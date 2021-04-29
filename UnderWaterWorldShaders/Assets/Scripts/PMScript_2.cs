@@ -10,6 +10,7 @@ public class PMScript_2 : MonoBehaviour
     [SerializeField] private float maxVerticalAngleFromHorizon;
     [SerializeField] private float speed = 0.1f;
     [SerializeField] private float period = 0.001f;
+    //[SerializeField] private float Snappiness = 18f;
     private Vector2 velocity;
     private Vector2 rotation; //the current rotation in degrees
     private Vector2 lastInputEvent;//The last recieved non-zerro input value
@@ -78,8 +79,18 @@ public class PMScript_2 : MonoBehaviour
 
         //rb.velocity = new Vector3(activeStrafeSpeed, bob , activeForwardSpeed);
         //rb.velocity = transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + bob;
-        rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob);
+        if (Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0)
+        {
+            rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob);
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
 
+
+        //rb.AddForce(new Vector3((activeStrafeSpeed) - rb.velocity.x * Snappiness, (bob) - rb.velocity.y * Snappiness, (activeForwardSpeed) - rb.velocity.z * Snappiness));
         //transform.position += (transform.forward * activeForwardSpeed * Time.deltaTime) + (transform.right * activeStrafeSpeed * Time.deltaTime) + (bob);
         //transform.position = Vector3.ClampMagnitude(transform.position, speed * speed);
             //Debug.Log("Y Position: " + transform.position.y);
