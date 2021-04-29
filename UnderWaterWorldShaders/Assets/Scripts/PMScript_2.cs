@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PMScript_2 : MonoBehaviour
 {
@@ -127,6 +128,9 @@ public class PMScript_2 : MonoBehaviour
             Cursor.visible = true;
         }
 
+    
+        
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Collectable"))
@@ -145,7 +149,5 @@ public class PMScript_2 : MonoBehaviour
         {
             winTextObject.SetActive(true);
         }
-    }
-        
     }
 }
