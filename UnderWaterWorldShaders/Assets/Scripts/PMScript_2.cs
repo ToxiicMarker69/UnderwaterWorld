@@ -11,6 +11,8 @@ public class PMScript_2 : MonoBehaviour
     [SerializeField] private float speed = 0.1f;
     [SerializeField] private float period = 0.001f;
     //[SerializeField] private float Snappiness = 18f;
+    public TextMeshProUGUI countText;
+    public GameObject winTextObject;
     private Vector2 velocity;
     private Vector2 rotation; //the current rotation in degrees
     private Vector2 lastInputEvent;//The last recieved non-zerro input value
@@ -18,6 +20,7 @@ public class PMScript_2 : MonoBehaviour
     private float activeForwardSpeed, activeStrafeSpeed; //Horizontal/Vertical movement
     private float bob;
     Rigidbody rb;
+    private int count;
     
     private void OnEnable() {
         //Reset the slate
@@ -69,6 +72,9 @@ public class PMScript_2 : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined; //Locks Cursor in window until ESC is pressed to leave game view
         Cursor.visible = false; //Makes Cursor invisible
+        count = 0;
+        SetCountText();
+        winTextObject.SetActive(false);
     }
     void FixedUpdate()
     {   bob = period * Mathf.Sin(Time.time);
@@ -120,6 +126,26 @@ public class PMScript_2 : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape)){
             Cursor.visible = true;
         }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Collectable"))
+        {
+            other.gameObject.SetActive(false);
+            count += 1;
+            SetCountText();
+        }
+        
+    }
+    
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+        if (count >= 8)
+        {
+            winTextObject.SetActive(true);
+        }
+    }
         
     }
 }
