@@ -88,11 +88,11 @@ public class PMScript_2 : MonoBehaviour
         //rb.velocity = transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + bob;
         if (Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0)
         {
-            rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob);
+            rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob * 0.1f);
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0, bob, 0);
             rb.angularVelocity = Vector3.zero;
         }
 
