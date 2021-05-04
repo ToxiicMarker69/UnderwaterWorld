@@ -86,7 +86,7 @@ public class PMScript_2 : MonoBehaviour
 
         //rb.velocity = new Vector3(activeStrafeSpeed, bob , activeForwardSpeed);
         //rb.velocity = transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + bob;
-        if (Input.GetAxis("Vertical") + Input.GetAxis("Horizontal") != 0)
+        if (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")) != 0)
         {
             rb.MovePosition(transform.position + transform.forward * activeForwardSpeed + transform.right * activeStrafeSpeed + transform.up * bob * 0.1f);
         }
